@@ -1,4 +1,5 @@
-# Excercise 1: Write a Python program to ask the user for their name
+# Excercise 1:
+# Write a Python program to ask the user for their name
 # (e.g. John) and print "Hello John" on the screen
 
 def name_caller():
@@ -8,7 +9,8 @@ def name_caller():
 # uncomment the function caller to get the output
 # name_caller()
 
-# 2. Write a Python program to ask the user for their name and age,
+# Exercise 2:
+# Write a Python program to ask the user for their name and age,
 # and print them on the screen in the format "Hello John, you are 20 years old"
 
 def name_age_caller():
@@ -20,7 +22,8 @@ def name_age_caller():
 # uncomment the function caller to get the output
 # name_age_caller()
 
-# 3. Write a Python program to ask the user for width and hight of a rectangle and print the area.
+# Exercise 3:
+# Write a Python program to ask the user for width and hight of a rectangle and print the area.
 
 def rectangle_area():
     width = int(input("Introduce the width of a rectangle (in cm): "))
