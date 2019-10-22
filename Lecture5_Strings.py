@@ -17,7 +17,6 @@ def length_calculator():
     n_len = 0
     for i in your_string:
         n_len = n_len + 1
-
     print("The length of your string is: \n" + str(n_len))
 
 # uncomment the function caller to get the output
@@ -46,7 +45,6 @@ def word_reverser():
     new_string = ""
     for i in range(1, len(your_string) + 1):
         new_string = new_string + your_string[-i]
-
     print(new_string)
 
 # uncomment the function caller to get the output
@@ -64,7 +62,6 @@ def word_encryptor():
     new_string = ""
     for i in range(0, len(your_string)):
         new_string = new_string + chr(ord(your_string[i]) + 1)
-
     print(new_string)
 
 # uncomment the function caller to get the output
@@ -95,8 +92,8 @@ def word_messer():
         if your_string[first_letter_indx] == " ":
             while your_string[first_letter_indx] == " ":
                 first_letter_indx = randint(0, len(your_string) - 1)
-
         second_letter_indx = first_letter_indx
+
         while first_letter_indx == second_letter_indx or your_string[second_letter_indx] == " " or \
                 your_string[first_letter_indx] == your_string[second_letter_indx]:
             second_letter_indx = randint(0, len(your_string) - 1)
