@@ -28,16 +28,29 @@ def string_breakdown():
     print("The total number of digits is {0}".format(str(digit_counter)))
     print("The total number of characters is {0}".format(str(chr_counter)))
 
-string_breakdown()
+# uncomment the function caller to get the output
+# string_breakdown()
 
 # Exercise 3:
 # Extend your program from Exercise 2 and write a program to count how many digits (0-9) and how many letters
 # (a-z or A-Z) are in a sentence entered by the user.
 
+# Solution is the same as in exercise 2
+
 # Exercise 4:
 # Write a Python program to find and print the sum of digits of a number entered by the user.
 # Hint: There are different ways of approaching this problem. One way would be to read the number as a
 # string and use a loop to iterate over it to get each digit.
+
+def sum_digits():
+    number = str(input("Introduce a number: "))
+    count = 0
+    for i in number:
+        count += int(i)
+    print(count)
+
+# uncomment the function caller to get the output
+# sum_digits()
 
 # Exercise 5:
 # Write a Python program to keep asking the user to enter positive numbers and terminates when they
@@ -46,3 +59,18 @@ string_breakdown()
 # Hint: You can use a while-loop to keep asking the user to enter a number, the loop will keep going while
 # they enter a value >0. Once the loop is working correctly see how you’d add a condition to keep track of
 # the current smallest value and update it when a smaller value is found
+
+def maze_algo():
+    number = int(input("Introduce a number:"))
+    min = 1000000
+    count = 0
+    while number >= 0:
+        number = int(input("Introduce a number:"))
+        count += 1
+        if number < min and number >= 0:
+            min = number
+    print("Negative number introduced {0}, the count of total positive numbers is {1} and the minimum number was {2}"
+          .format(str(number),str(count),str(min)))
+
+# uncomment the function caller to get the output
+# maze_algo()
