@@ -1,5 +1,7 @@
 # Exercise 1:Write a Python function to sum all numbers in a list.
-#
+
+print("there we go!")
+
 # Exercise 2:Write a Python function to get the largest number from a list.
 #
 # Exercise 3: Write a Python function that takes a list of words and counts how many of them begin with ‘a’.
