@@ -58,5 +58,51 @@ def my_fifth_function(input):
 def my_sixth_function(input):
     print(input[0:2] + input[-2:])
 
-my_sixth_function("lolailola")
+# my_sixth_function("lolailola")
 
+# Exercise 7: Write a Python program to remove the characters which have odd index values of a given string.
+# The function should return the new string.
+
+def my_seventh_function(input):
+    ind = ""
+    for i in range(0,len(input)):
+        if (i+1) % 2 == 0:
+            ind = ind + input[i]
+    print(ind)
+
+# my_seventh_function("HelloWorld")
+
+# Exercise 8: Write a Python function to get the first half of a specified string of even lengthSample function and
+# result:string_first_half('Python') should return Pyt
+
+def my_eigth_function(input):
+    if not len(input) % 2 == 0:
+        print("String length not even")
+    else:
+        print(input[0:int(len(input)/2)])
+
+# my_eigth_function("Alvaro")
+
+# Exercise 9: Write a Python function to insert a string in the middle of a string. Sample function
+# and result:insert_sting_middle('{{}}', 'PHP') -> {{PHP}}
+
+def my_nineth_function(wrapper, input):
+    if not len(wrapper) % 2 == 0:
+        print("Wrapper string is not even")
+    else:
+        print(wrapper[0:int(len(wrapper)/2)] + input + (wrapper[int(len(wrapper)/2):]))
+
+# my_nineth_function("{{}}", "PHP")
+
+# Exercise 10: Write a Python function that takes a string and two indices, and returnsa
+# string with the part between the indices removed.For example: remove_substring(“Hellothere”, 2, 6) -> “Hehere”
+
+def my_tenth_function(input,ind1,ind2):
+    if ind1 < 0 or ind2 < 0:
+        print("negative indexes not allowed")
+    elif ind2 <= ind1:
+        print("Second index cannot be less or equal than the first index")
+    else:
+        print(input[:ind1]+input[ind2:])
+
+# my_tenth_function("Hellothere", 2, 6)
