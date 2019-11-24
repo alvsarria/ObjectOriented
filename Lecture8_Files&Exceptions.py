@@ -15,3 +15,11 @@ for i in range(0,11):
     output_file.write("\n")
 
 output_file.close()
+
+number = input("Enter a number")
+try:
+    print("Number multiplied by two is",int(number)*2)
+except ValueError:
+    print("Not a number, cannot be multiplied")
+else:
+    print("Multiplication successful!")
