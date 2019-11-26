@@ -12,7 +12,7 @@ def word_counter(first_input,second_input):
             print(len(i), end = ", ")
 
 try:
-    file_obj = open("Files_4_Exercises/Lecture9_Ex1_1","r")
+    file_obj = open("Files_4_Exercises/Lecture9_Ex1","r")
 except FileNotFoundError:
     print("File not found")
 else:
@@ -21,10 +21,33 @@ else:
         if line.strip() != " "*len(line.strip()):
             word_counter(line,i)
             i += 1
+    file_obj.close()
 
 # Exercise 2: Write a Python function to read a sentence and reverse every word that starts with ‘a’. Use the function
 # to read text from a file, reverse each word that start with ‘a’ and save the result into another file.
-#
+
+def a_word_reverser(input):
+    output = input.split(" ")
+    for i in output:
+        if output == [""]:
+            output == " "
+        elif i[0].lower() == "a":
+            # in case a word ends with interrogation or exlamation mark
+            if i[-1].isalpha():
+                output[output.index(i)] = i[::-1]
+            else:
+                output[output.index(i)] = i[:-1][::-1]+i[-1]
+    print(" ".join(output))
+
+try:
+    file_obj = open("Files_4_Exercises/Lecture9_Ex2", "r")
+except FileNotFoundError:
+    print("File not found")
+else:
+    for line in file_obj:
+        a_word_reverser(line.strip())
+    file_obj.close()
+
 # Exercise 3: Write a Python function replace_all(list, l_out, l_in) that takes three parameters: a list of numbers,
 # a list of numbers to be replaced and a list of numbers to use as replacements.For example
 # replace_all([1,2,5,6,2,7,1,2], [2,4],[200,400]) will replace all occurrences of 2 with 200 and all occurrences of
