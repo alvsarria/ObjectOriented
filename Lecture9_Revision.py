@@ -99,8 +99,6 @@ else:
     file_obj.close()
     file_obj_2.close()
 
-
-
 # Exercise 5: Write a Python function to replace every word in a sentence which is longer than 6 characters with
 # “blah”. Use the function to read a text from a file, replace every long word with ‘blah and write the output in
 # another file.
