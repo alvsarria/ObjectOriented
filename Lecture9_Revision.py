@@ -75,7 +75,32 @@ replace_all([1,2,5,6,2,7,1,2],[2,4],[200,400])
 
 # Exercise 4: Write a Python function to replace every third word in a sentence with “hello”. Use the function to read
 # a text from a file, replace every third word with ‘hello’ and write the output in another file.
-#
+
+try:
+    file_obj = open("Files_4_Exercises/Lecture9_Ex3","r")
+except FileNotFoundError:
+    print("File not found")
+else:
+    file_obj_2 = open("Files_4_Exercises/Lecture9_Ex3_output","w")
+    counter = 0
+    for line in file_obj:
+        new_line = line.strip().split(" ")
+        for i in range(0,len(new_line)):
+            counter += 1
+            if new_line == [""]:
+                counter += -1
+            if counter % 3 == 0 and new_line != [""]:
+                if not new_line[i][-1].isalpha():
+                    new_line[i] = "hello"+new_line[i][-1]
+                else:
+                    new_line[i] = "hello"
+        file_obj_2.write(" ".join(new_line))
+        file_obj_2.write("\n")
+    file_obj.close()
+    file_obj_2.close()
+
+
+
 # Exercise 5: Write a Python function to replace every word in a sentence which is longer than 6 characters with
 # “blah”. Use the function to read a text from a file, replace every long word with ‘blah and write the output in
 # another file.
