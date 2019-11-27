@@ -120,7 +120,6 @@ def long_word_replacer(f_input):
                 line[i] = "blah"
     return " ".join(line)
 
-
 try:
     file_obj = open("Files_4_Exercises/Lecture9_Ex5","r")
 except FileNotFoundError:
@@ -135,3 +134,32 @@ else:
 
 # Exercise 6: Write a Python program that reads text from a file and generates a dictionary – a list of unique words.
 # Save those words in a new file, one word per line.
+
+def dictionary_creator(f_input, f_output):
+    try:
+        file_obj = open(f_input, "r")
+    except FileNotFoundError:
+        print("File not found")
+    else:
+        file_obj_2 = open(f_output, "w")
+        dict = {}
+        counter = 0
+        for line in file_obj:
+            my_line = line.strip().split(" ")
+            if my_line != ['']:
+                for i in my_line:
+                    if not i in list(dict.values()):
+                        counter += 1
+                        if not i[-1].isalpha():
+                            dict.update({counter: i[:-1]})
+                            file_obj_2.write(i[:-1])
+                        else:
+                            dict.update({counter: i})
+                            file_obj_2.write(i)
+                        file_obj_2.write("\n")
+        print(dict)
+        file_obj.close()
+        file_obj_2.close()
+
+dictionary_creator("Files_4_Exercises/Lecture9_Ex6","Files_4_Exercises/Lecture9_Ex6_output")
+
