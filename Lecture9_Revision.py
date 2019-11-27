@@ -100,6 +100,8 @@ else:
     file_obj_2 = open("Files_4_Exercises/Lecture9_Ex4_output","w")
     counter = 0
     third_word_replacer(file_obj, file_obj_2)
+    file_obj.close()
+    file_obj_2.close()
 
 # Exercise 5: Write a Python function to replace every word in a sentence which is longer than 6 characters with
 # “blah”. Use the function to read a text from a file, replace every long word with ‘blah and write the output in
