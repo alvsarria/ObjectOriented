@@ -76,14 +76,9 @@ replace_all([1,2,5,6,2,7,1,2],[2,4],[200,400])
 # Exercise 4: Write a Python function to replace every third word in a sentence with “hello”. Use the function to read
 # a text from a file, replace every third word with ‘hello’ and write the output in another file.
 
-try:
-    file_obj = open("Files_4_Exercises/Lecture9_Ex3","r")
-except FileNotFoundError:
-    print("File not found")
-else:
-    file_obj_2 = open("Files_4_Exercises/Lecture9_Ex3_output","w")
+def third_word_replacer(f_input, f_output):
     counter = 0
-    for line in file_obj:
+    for line in f_input:
         new_line = line.strip().split(" ")
         for i in range(0,len(new_line)):
             counter += 1
@@ -94,14 +89,49 @@ else:
                     new_line[i] = "hello"+new_line[i][-1]
                 else:
                     new_line[i] = "hello"
-        file_obj_2.write(" ".join(new_line))
-        file_obj_2.write("\n")
-    file_obj.close()
-    file_obj_2.close()
+        f_output.write(" ".join(new_line))
+        f_output.write("\n")
+
+try:
+    file_obj = open("Files_4_Exercises/Lecture9_Ex4","r")
+except FileNotFoundError:
+    print("File not found")
+else:
+    file_obj_2 = open("Files_4_Exercises/Lecture9_Ex4_output","w")
+    counter = 0
+    third_word_replacer(file_obj, file_obj_2)
 
 # Exercise 5: Write a Python function to replace every word in a sentence which is longer than 6 characters with
 # “blah”. Use the function to read a text from a file, replace every long word with ‘blah and write the output in
 # another file.
-#
+
+def long_word_replacer(f_input):
+    line = f_input.split(" ")
+    for i in range(0,len(line)):
+        counter = 0
+        for j in line[i]:
+            if not j.isalpha():
+                counter += 1
+        total_length = len(line[i]) - counter
+        if total_length > 6:
+            if not line[i][-1].isalpha():
+                line[i] = "blah"+line[i][-1]
+            else:
+                line[i] = "blah"
+    return " ".join(line)
+
+
+try:
+    file_obj = open("Files_4_Exercises/Lecture9_Ex5","r")
+except FileNotFoundError:
+    print("File not found")
+else:
+    file_obj_2 = open("Files_4_Exercises/Lecture9_Ex5_output","w")
+    for line in file_obj:
+        file_obj_2.write(long_word_replacer(line.strip()))
+        file_obj_2.write("\n")
+    file_obj.close()
+    file_obj_2.close()
+
 # Exercise 6: Write a Python program that reads text from a file and generates a dictionary – a list of unique words.
 # Save those words in a new file, one word per line.
