@@ -54,6 +54,8 @@ def second_function_exam(input_line):
 print("\n")
 print("Question 2:")
 
+# Important: I am using a relative path please if this does not work use the absoulte path to the file downloaded
+# in your local machine along this script file
 try:
     file_obj = open("Input/text_file","r")
 except FileNotFoundError:
