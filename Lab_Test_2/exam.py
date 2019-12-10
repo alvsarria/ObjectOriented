@@ -3,13 +3,33 @@
 # greater than 20 and divisibly by 3.
 
 def first_function_exam(input_list):
-    output_list = []
-    for i in input_list:
-        if i > 20 and i % 3 == 0:
-            output_list.append(i)
-    return output_list
+    if type(input_list) == list:
+        print("Input list is:",input_list)
+        output_list = []
+        for i in input_list:
+            # Handling cases in where the element of the list is not a number
+            try:
+                i > 20 and i % 3 == 0
+            except TypeError:
+                print("'{0}' is a non numeric value, deprecating...".format(i))
+            else:
+                if i > 20 and i % 3 == 0:
+                    output_list.append(i)
+        if len(output_list) == 0:
+            return "None of the numbers in the list fulfills the criteria"
+        else:
+            return "Final list is: {0}".format(output_list)
+    else:
+        return "Input is not a list, please change it"
 
-print(first_function_exam([12,1,34,26,39,44,30,27,44,3]))
+print("Question 1:")
+
+print(first_function_exam([12,1,"c",34,26,"!",39,44,30,27,44,3,"a"]))
+# Uncomment below to see different behavior with different inputs
+# print("-----")
+# print(first_function_exam([1]))
+# print("-----")
+# print(first_function_exam(1))
 
 # Question 2:
 # a) Write a Python function that will take a text (sentence) and will reverse every second word.
@@ -22,7 +42,7 @@ def second_function_exam(input_line):
     output_line = []
     for i in range(0,len(input_line_list)):
         if (i+1) % 2 == 0:
-            # Controling that punctuation is not reversed
+            # Controlling that punctuation is not reversed
             if input_line_list[i][-1].isalpha():
                 output_line.append(input_line_list[i][::-1])
             else:
@@ -31,10 +51,21 @@ def second_function_exam(input_line):
             output_line.append(input_line_list[i])
     return " ".join(output_line)
 
+print("\n")
+print("Question 2:")
+
 try:
-    file_obj = open("input_files/input_file","r")
+    file_obj = open("Input/text_file","r")
 except FileNotFoundError:
-    print("The file does not exist or the path is incorrect, please review")
+    print("File does not exist or the file path is incorrect, please review this")
 else:
-    print("LOL")
+    file_obj_2 = open("Output/text_file_result","w")
+    for line in file_obj:
+        file_obj_2.write(second_function_exam(line.strip()))
+        file_obj_2.write("\n")
     file_obj.close()
+    file_obj_2.close()
+    print("File successfully reversed and copied")
+
+
+
