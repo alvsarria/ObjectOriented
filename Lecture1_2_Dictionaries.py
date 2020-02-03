@@ -39,10 +39,7 @@ print("--------")
 dicitonary_2 = {"apple":20, "banana":30, "orange":10, "pear":10, "grape":40, "melon":5, "watermelon":15, "lemon":25}
 
 def total_quantity(dict):
-    cnt = 0
-    for key in dict:
-        cnt += dict[key]
-    return cnt
+    return sum(dict.values())
 
 print(total_quantity(dicitonary_2))
 
