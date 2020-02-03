@@ -11,19 +11,19 @@ def office_finder(dict,office):
         if dict[key][1] == office:
             print(key)
 
-print(office_finder(dicitonary_1,"BCN"))
+office_finder(dicitonary_1,"BCN")
+print("--------")
 
 # Exercise 2: Using the contact list from Exercise 1 write a python function that prints all people whose name begins
 # with a specific character.
 
 def print_names_dict(dict,first_character):
-    list = []
     for key in dict:
         if key[0].lower() == first_character.lower():
-            list.append(key)
-    return list
+            print(key)
 
-print(print_names_dict(dicitonary_1,"j"))
+print_names_dict(dicitonary_1,"a")
+print("--------")
 
 # Exercise3: Write a Python program to create a list of items and corresponding quantities,
 # e.g. inventory = {‘apple’:20, ‘banana’:30, ‘orange’:10}
@@ -55,3 +55,4 @@ def stock_up(dict, item, qty):
 
 print(stock_up(dicitonary_2,"mandarina", 15))
 print(stock_up(dicitonary_2,"orange", 25))
+print("--------")
