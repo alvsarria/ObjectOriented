@@ -7,11 +7,9 @@ dicitonary_1 = {"Marc Virgili":[123456,"BCN"], "Adrián Cacho":[234561,"BCN"], "
               "Alex Guasch":[654321,"BCN"], "Gonzalo Zamperoni":[435621,"BCN"], "JoseM Melen":[123654,"BCN"]}
 
 def office_finder(dict,office):
-    list = []
     for key in dict:
         if dict[key][1] == office:
-            list.append(key)
-    return list
+            print(key)
 
 print(office_finder(dicitonary_1,"BCN"))
 
