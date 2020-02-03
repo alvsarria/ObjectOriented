@@ -40,7 +40,6 @@ dicitonary_2 = {"apple":20, "banana":30, "orange":10, "pear":10, "grape":40, "me
 
 def total_quantity(dict):
     return sum(dict.values())
-lol
 
 print(total_quantity(dicitonary_2))
 
