@@ -1,7 +1,7 @@
 from upload_inventory import upload
 from download_inventory import download
+from print_details import status
 
 inventory = upload()
 
-for i in inventory:
-    print(inventory[i])
+status(inventory)
