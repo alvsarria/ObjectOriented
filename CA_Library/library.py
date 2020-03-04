@@ -4,4 +4,7 @@ from print_details import status
 
 inventory = upload()
 
+download(inventory)
+
 status(inventory)
+
