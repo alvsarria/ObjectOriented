@@ -1,3 +1,4 @@
+# function to upload the inventory information stored in our external .txt database
 def upload():
     library_inventory = {}
     try:
