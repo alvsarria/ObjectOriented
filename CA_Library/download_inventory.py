@@ -1,3 +1,4 @@
+# function to bulk the inventory into our .txt database
 def download(inventory):
     file_obj = open("library_inventory.txt", "w")
     for i in inventory:
