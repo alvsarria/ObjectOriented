@@ -6,6 +6,12 @@ from search_book import search
 
 inventory = upload()
 
+add(inventory)
+
+status(inventory)
+
+download(inventory)
+
 search(inventory)
 
-#status(inventory)
+

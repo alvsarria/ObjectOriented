@@ -27,7 +27,7 @@ def add(inventory):
                                    "than 10 copies at a time, please try again:  ")
             inventory[isbn][2] = str(int(inventory[isbn][2]) + int(new_amount))
             print("-------------")
-            print("[CONSOLE] - Amount added, thanks.")
+            print("[CONSOLE] - " + new_amount + " books added to the existing library, thanks.")
         else:
             print("-------------")
             print("[CONSOLE] - Not adding more books, thanks.")
