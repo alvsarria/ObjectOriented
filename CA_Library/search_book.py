@@ -1,3 +1,5 @@
+from upload_functions import upload_inventory
+
 def cleaner(input):
     for i in [",", ".", ";", ":", "!", "?","'s","s'"]:
         input = input.replace(i,"")
@@ -10,7 +12,8 @@ def cleaner(input):
     return output
 
 
-def search(inventory):
+def search():
+    inventory = upload_inventory()
     key_word = input("Please introduce the name of the book (or similar) that you are looking for: ")
     titles = []
     titles_real = []
@@ -59,6 +62,7 @@ def search(inventory):
         print("")
         if select_index.lower() == "n":
             print("...Search terminated")
+            return  True
         else:
             while len(select_index) == 0 or not select_index.isdigit() or int(select_index) not in postitions_list:
                 select_index = input("Reference number selected invalid, please try again: ")
@@ -91,3 +95,4 @@ def search(inventory):
                   (3 + 19) * "#" + (4 + 6) * "#")
             print("")
             print("ISBN: " + isbn)
+            return isbn

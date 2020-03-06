@@ -1,17 +1,11 @@
-from upload_inventory import upload
-from download_inventory import download
 from print_details import status
 from add_book import add
 from search_book import search
+from checkout_book import checkout
 
-inventory = upload()
+isbn = search()
 
-add(inventory)
+checkout(isbn)
 
-status(inventory)
-
-search(inventory)
-
-download(inventory)
 
 

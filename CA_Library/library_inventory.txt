@@ -1,4 +1,4 @@
-9780545790352;;Harry Potter and the Sorcerer's Stone;;J.K. Rowling;;10;;12
+9780545790352;;Harry Potter and the Sorcerer's Stone;;J.K. Rowling;;8;;12
 9780439064873;;Harry Potter and the Chamber of Secrets;;J.K. Rowling;;8;;10
 9780439136365;;Harry Potter And The Prisoner Of Azkaban;;J.K. Rowling;;7;;7
 9780545791427;;Harry Potter and the Goblet of Fire;;J.K. Rowling;;5;;6
@@ -16,4 +16,4 @@
 9780553579901;;A Clash of Kings;;George R.R. Martin;;8;;8
 9780553106633;;A Storm of Swords;;George R.R. Martin;;4;;5
 9780553582024;;A Feast for Crows;;George R.R. Martin;;6;;6
-9780553582017;;A Dance with Dragons;;George R.R. Martin;;12;;13
+9780553582017;;A Dance with Dragons;;George R.R. Martin;;4;;5
