@@ -9,11 +9,11 @@
 9780780644045;;The Lord of the Rings: Two Towers;;J. R. R. Tolkien;;6;;8
 9780345339737;;The Lord of the Rings: The Return of the King;;J. R. R. Tolkien;;12;;12
 9780547928227;;The Hobbit;;J. R. R. Tolkien;;4;;6
-9787208125117;;The Silmarillion;;J. R. R. Tolkien;;3;;4
-9780756404741;;The Name of the Wind;;Patrick Rothfuss;;3;;6
+9787208125117;;The Silmarillion;;J. R. R. Tolkien;;4;;4
+9780756404741;;The Name of the Wind;;Patrick Rothfuss;;4;;6
 9780756407919;;The Wise Man's Fear;;Patrick Rothfuss;;2;;2
 9780553386790;;A Game of Thrones;;George R.R. Martin;;6;;7
 9780553579901;;A Clash of Kings;;George R.R. Martin;;8;;8
 9780553106633;;A Storm of Swords;;George R.R. Martin;;4;;5
 9780553582024;;A Feast for Crows;;George R.R. Martin;;6;;6
-9780553582017;;A Dance with Dragons;;George R.R. Martin;;4;;5
+9780553582017;;A Dance with Dragons;;George R.R. Martin;;5;;5

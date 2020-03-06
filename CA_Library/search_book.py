@@ -62,8 +62,8 @@ def search():
         print("")
         select_index = input("[CONSOLE] - Please select the reference number of the"
                              " book you are looking for or N to terminate the search: ")
-        print("")
         if select_index.lower() == "n":
+            print("")
             print("[CONSOLE] - Search terminated")
             return  True
         else:
@@ -74,6 +74,7 @@ def search():
                 count += 1
                 if inventory[key][0] == titles_post_search[int(select_index) - 1]:
                     isbn = key
+            print("")
             print("[CONSOLE] - Details: ")
             print("")
             # printing inventory status in a nice way
