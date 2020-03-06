@@ -41,6 +41,7 @@ def status():
     else:
         max_len_amount_diff = max_len_amount
     # printing inventory status in a nice way
+    print("")
     print((3 + max_len_isbn_diff) * "#" + (3 + max_len_title_diff) * "#" +
           (3 + max_len_author_diff) * "#" + (4 + max_len_amount_diff) * "#")
     print("|" + " " * (int(round((3 + max_len_isbn_diff) / 2,0)) - int(round(4 / 2,0)) - 1) + "ISBN" +

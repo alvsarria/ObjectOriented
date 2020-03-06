@@ -3,7 +3,7 @@ from download_functions import *
 
 def checkout(isbn):
     print("")
-    check_out_ind = input("Do you want to check out this book? (Y/N)")
+    check_out_ind = input("[CONSOLE] - Do you want to check out this book? (Y/N)")
     while check_out_ind.lower() not in ["y", "n"]:
         print("")
         check_out_ind = input("[CONSOLE][ERROR] - I do not understand your command please use Y for yes or N for "
