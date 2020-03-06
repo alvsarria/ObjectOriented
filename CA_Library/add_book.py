@@ -1,7 +1,8 @@
 from download_functions import download_inventory
-
+from upload_functions import upload_inventory
 # function to add book to the library or icnrease the amount of copies of an existing book
-def add(inventory):
+def add():
+    inventory = upload_inventory()
     # introduce user inputs for isbn and introducing quality input checks
     print("")
     isbn = input("[CONSOLE] - Please enter the ISBN number of the book you want to add to the library: ")

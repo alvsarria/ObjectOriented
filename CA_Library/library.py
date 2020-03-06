@@ -4,8 +4,6 @@ from search_book import search
 from checkout_book import checkout
 
 isbn = search()
-
-checkout(isbn)
-
-
+if str(isbn).isdigit():
+    checkout(isbn)
 

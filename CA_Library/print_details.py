@@ -1,5 +1,8 @@
+from upload_functions import upload_inventory
+
 # function to print all the details of all the books in the library
-def status(inventory):
+def status():
+    inventory = upload_inventory()
     # crearing empty lists to store lengths of strings
     isbn = []
     title = []
