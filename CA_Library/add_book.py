@@ -21,11 +21,12 @@ def add(inventory):
         if add_book_ind.lower() == "y":
             print("-------------")
             new_amount = input("[CONSOLE] - Please enter the amount of books you want to add: ")
-            while len(new_amount) >= 2 or not new_amount.isdigit():
+            while int(new_amount) >= 10 or not new_amount.isdigit():
                 print("-------------")
                 new_amount = input("[CONSOLE][ERROR] - Remember the amount has to be numerical and we cannot add more "
                                    "than 10 copies at a time, please try again:  ")
             inventory[isbn][2] = str(int(inventory[isbn][2]) + int(new_amount))
+            inventory[isbn][3] = str(int(inventory[isbn][3]) + int(new_amount))
             print("-------------")
             print("[CONSOLE] - " + new_amount + " books added to the existing library, thanks.")
         else:
@@ -47,11 +48,11 @@ def add(inventory):
                            "please try again: ")
         print("-------------")
         amount = input("[CONSOLE] - Please enter the amount of purchased books you want to add to the library: ")
-        while len(amount) > 2 or not amount.isdigit():
+        while int(amount) >= 10 or not amount.isdigit():
             print("-------------")
-            amount = input("[CONSOLE][ERROR] - Remember the amount has to be numerical and we cannot store more than "
-                           "100 items, please try again:  ")
-        inventory[isbn] = [title.strip(), author.strip(), amount]
+            amount = input("[CONSOLE][ERROR] - Remember the amount has to be numerical and we cannot add more than "
+                           "10 copies at a time, please try again:  ")
+        inventory[isbn] = [title.strip(), author.strip(), amount, amount]
         print("-------------")
         print("[CONSOLE] - Book added, thanks.")
     return inventory

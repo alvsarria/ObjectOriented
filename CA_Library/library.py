@@ -10,8 +10,8 @@ add(inventory)
 
 status(inventory)
 
-download(inventory)
-
 search(inventory)
+
+download(inventory)
 
 

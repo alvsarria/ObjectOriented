@@ -85,7 +85,8 @@ def search(inventory):
             print(("| " + isbn + " " * ((3 + 13) - len(isbn) - 2)) +
                   ("| " + inventory[isbn][0] + " " * ((3 + 49) - len(inventory[isbn][0]) - 2)) +
                   ("| " + inventory[isbn][1] + " " * ((3 + 19) - len(inventory[isbn][1]) - 2)) +
-                  ("| " + inventory[isbn][2] + " " * ((3 + 6) - len(inventory[isbn][2]) - 2)) + "|")
+                  ("| " + inventory[isbn][2] + "/" + inventory[isbn][3] + " " *
+                   ((3 + 6) - (len(inventory[isbn][2]) + len(inventory[isbn][2]) +1) - 2)) + "|")
             print((3 + 13) * "#" + (3 + 49) * "#" +
                   (3 + 19) * "#" + (4 + 6) * "#")
             print("")

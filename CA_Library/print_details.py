@@ -53,6 +53,7 @@ def status(inventory):
         print(("| " + i + " " * ((3 + max_len_isbn_diff)-len(i)-2)) +
               ("| " + inventory[i][0] + " " * ((3 + max_len_title_diff)-len(inventory[i][0])-2)) +
               ("| " + inventory[i][1] + " " * ((3 + max_len_author_diff)-len(inventory[i][1])-2)) +
-              ("| " + inventory[i][2] + " " * ((3 + max_len_amount_diff)-len(inventory[i][2])-2)) + "|")
+              ("| " + inventory[i][2] + "/" + inventory[i][3]  + " " *
+               ((3 + max_len_amount_diff)-(len(inventory[i][2]) + len(inventory[i][3]) + 1)-2)) + "|")
     print((3 + max_len_isbn) * "#" + (3 + max_len_title) * "#" +
           (3 + max_len_author) * "#" + (4 + max_len_amount_diff) * "#")
