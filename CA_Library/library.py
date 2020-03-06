@@ -1,4 +1,4 @@
-from print_details import status
+from status_functions import *
 from add_book import add
 from search_book import search
 from checkout_book import checkout
@@ -7,4 +7,4 @@ from checkout_book import checkout
 #if str(isbn).isdigit():
 #    checkout(isbn)
 
-search()
+status_inventory()

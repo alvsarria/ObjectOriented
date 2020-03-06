@@ -2,7 +2,7 @@
 def upload_inventory():
     library_inventory = {}
     try:
-        file_obj = open("library_inventory.txt", "r")
+        file_obj = open("DBs/library_inventory.txt", "r")
     except FileNotFoundError:
         print("The file you are trying to read does not exist")
     else:
@@ -16,7 +16,7 @@ def upload_inventory():
 def upload_log():
     user_log_file = []
     try:
-        file_obj = open("checkout_books_log_file.txt", "r")
+        file_obj = open("DBs/checkout_books_log_file.txt", "r")
     except FileNotFoundError:
         print("The file you are trying to read does not exist")
     else:

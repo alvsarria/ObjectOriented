@@ -1,7 +1,7 @@
-from upload_functions import upload_inventory
+from upload_functions import *
 
 # function to print all the details of all the books in the library
-def status():
+def status_inventory():
     inventory = upload_inventory()
     # crearing empty lists to store lengths of strings
     isbn = []
@@ -61,3 +61,14 @@ def status():
                ((3 + max_len_amount_diff)-(len(inventory[i][2]) + len(inventory[i][3]) + 1)-2)) + "|")
     print((3 + max_len_isbn) * "#" + (3 + max_len_title) * "#" +
           (3 + max_len_author) * "#" + (4 + max_len_amount_diff) * "#")
+
+def status_log_file():
+    log_file = upload_log()
+    print(log_file)
+    print("")
+    print((4 + 49) * "#")
+    print("|" + " " * 22 + "TITLE/S" + " " * 22 + "|")
+    print((4 + 49) * "#")
+    for i in log_file:
+        print("| " + i + " " * (50 - len(str(i))) + "|")
+    print((4 + 49) * "#")
