@@ -74,8 +74,7 @@ def search():
                 count += 1
                 if inventory[key][0] == titles_post_search[int(select_index) - 1]:
                     isbn = key
-            print("")
-            print("[CONSOLE] - The book you were looking for is: ")
+            print("[CONSOLE] - Details: ")
             print("")
             # printing inventory status in a nice way
             print((3 + 13) * "#" + (3 + 49) * "#" +
