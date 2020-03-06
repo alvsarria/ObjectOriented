@@ -64,7 +64,6 @@ def status_inventory():
 
 def status_log_file():
     log_file = upload_log()
-    print(log_file)
     print("")
     print((4 + 49) * "#")
     print("|" + " " * 22 + "TITLE/S" + " " * 22 + "|")
