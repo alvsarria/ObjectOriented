@@ -2,6 +2,8 @@ from upload_functions import *
 
 # function to print all the details of all the books in the library
 def status_inventory():
+    print("")
+    print("[CONSOLE] - Please see all the details of the books in this library:")
     inventory = upload_inventory()
     # crearing empty lists to store lengths of strings
     isbn = []
@@ -64,10 +66,16 @@ def status_inventory():
 
 def status_log_file():
     log_file = upload_log()
-    print("")
-    print((4 + 49) * "#")
-    print("|" + " " * 22 + "TITLE/S" + " " * 22 + "|")
-    print((4 + 49) * "#")
-    for i in log_file:
-        print("| " + i + " " * (50 - len(str(i))) + "|")
-    print((4 + 49) * "#")
+    if len(log_file) == 0:
+        print("")
+        print("[CONSOLE] - No books checked out")
+    else:
+        print("")
+        print("[CONSOLE] - The books you have checked out are: ")
+        print("")
+        print((4 + 49) * "#")
+        print("|" + " " * 22 + "TITLE/S" + " " * 22 + "|")
+        print((4 + 49) * "#")
+        for i in log_file:
+            print("| " + i + " " * (50 - len(str(i))) + "|")
+        print((4 + 49) * "#")

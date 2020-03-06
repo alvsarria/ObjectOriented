@@ -7,14 +7,5 @@ from return_book import return_book
 status_inventory()
 status_log_file()
 
-isbn = search()
-if str(isbn).isdigit():
-    checkout(isbn)
 
-status_inventory()
-status_log_file()
 
-return_book()
-
-status_inventory()
-status_log_file()
