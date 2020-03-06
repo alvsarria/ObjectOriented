@@ -14,7 +14,8 @@ def cleaner(input):
 
 def search():
     inventory = upload_inventory()
-    key_word = input("Please introduce the name of the book (or similar) that you are looking for: ")
+    print("")
+    key_word = input("[CONSOLE] - Please introduce the name of the book (or similar) that you are looking for: ")
     titles = []
     titles_real = []
     key_word = cleaner(key_word)
@@ -38,11 +39,12 @@ def search():
     shell_scores.sort(reverse = True)
     if sum(scores) == 0:
         print("")
-        print("The book you are looking for does not exist or it is not in this library")
+        print("[CONSOLE] - The book you are looking for does not exist or it is not in this library")
         return False
     else:
         # Printing initial search
-        print("The books found from your search keywords were:")
+        print("")
+        print("[CONSOLE] - The books found from your search keywords were:")
         print("")
         print((3 + len("REFERENCE")) * "#"  + (4 + 49) * "#")
         print("| REFERENCE |" + " " * 22 + "TITLE" + " " * 24 + "|")
@@ -58,19 +60,22 @@ def search():
                 print("| " + str(count) + " " * (10-len(str(count))) +  "| " + i[1] + " " * (50-len(str(i[1]))) + "|")
         print((3 + len("REFERENCE")) * "#" + (4 + 49) * "#")
         print("")
-        select_index = input("Please select the reference number of the book you are looking for or N to terminate the search: ")
+        select_index = input("[CONSOLE] - Please select the reference number of the"
+                             " book you are looking for or N to terminate the search: ")
         print("")
         if select_index.lower() == "n":
-            print("...Search terminated")
+            print("[CONSOLE] - Search terminated")
             return  True
         else:
             while len(select_index) == 0 or not select_index.isdigit() or int(select_index) not in postitions_list:
-                select_index = input("Reference number selected invalid, please try again: ")
+                print("")
+                select_index = input("[CONSOLE] - Reference number selected invalid, please try again: ")
             for key in inventory:
                 count += 1
                 if inventory[key][0] == titles_post_search[int(select_index) - 1]:
                     isbn = key
-            print("The book you were looking for is: ")
+            print("")
+            print("[CONSOLE] - The book you were looking for is: ")
             print("")
             # printing inventory status in a nice way
             print((3 + 13) * "#" + (3 + 49) * "#" +
@@ -94,5 +99,5 @@ def search():
             print((3 + 13) * "#" + (3 + 49) * "#" +
                   (3 + 19) * "#" + (4 + 6) * "#")
             print("")
-            print("ISBN: " + isbn)
+            print("[CONSOLE] - ISBN: " + isbn)
             return isbn
