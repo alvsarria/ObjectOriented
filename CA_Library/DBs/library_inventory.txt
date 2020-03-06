@@ -2,7 +2,7 @@
 9780439064873;;Harry Potter and the Chamber of Secrets;;J.K. Rowling;;8;;10
 9780439136365;;Harry Potter And The Prisoner Of Azkaban;;J.K. Rowling;;7;;7
 9780545791427;;Harry Potter and the Goblet of Fire;;J.K. Rowling;;6;;6
-9780439358071;;Harry Potter And The Order Of The Phoenix;;J.K. Rowling;;10;;11
+9780439358071;;Harry Potter And The Order Of The Phoenix;;J.K. Rowling;;11;;11
 9780439785969;;Harry Potter and the Half-Blood Prince;;J.K. Rowling;;7;;8
 9780545139700;;Harry Potter and the Deathly Hallows;;J.K. Rowling;;8;;10
 9780757992735;;The Lord of the Rings: The Fellowship of the Ring;;J. R. R. Tolkien;;9;;9
