@@ -65,7 +65,8 @@ def search():
         if select_index.lower() == "n":
             print("")
             print("[CONSOLE] - Search terminated")
-            return  True
+            isbn = ""
+            return  isbn
         else:
             while len(select_index) == 0 or not select_index.isdigit() or int(select_index) not in postitions_list:
                 print("")
