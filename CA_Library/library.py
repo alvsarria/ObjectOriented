@@ -6,7 +6,7 @@ from return_book import return_book
 
 library_ind = True
 print("")
-print("[CONSOLE] - Logging in... Which operations would you like to proceed with?")
+print("[CONSOLE] - Logging in... Which operation would you like to proceed with?")
 while library_ind:
     print("")
     print(114 * "#")
