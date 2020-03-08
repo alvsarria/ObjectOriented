@@ -162,14 +162,13 @@ def add():
         # flow control to guide user and avoid computation errors
         while add_book_ind.lower() not in ["y","n"]:
             print("")
-            add_book_ind = input( "[CONSOLE][ERROR] - I do not understand your command please use Y for yes or N for "
-                                  "no, please try again: ")
+            add_book_ind = input("[CONSOLE][ERROR] - Please select 'Y' or 'N':")
         if add_book_ind.lower() == "y":
             print("")
             new_amount = input("[CONSOLE] - Please enter the amount of books you want to add: ")
             # flow control to avoid user adding more than 9 copies at a time (this is a personal requirement) or not
             # inserting a numeric value
-            while int(new_amount) >= 10 or not new_amount.isdigit():
+            while new_amount not in ["1","2","3","4","5","6","7","8","9"]:
                 print("")
                 new_amount = input("[CONSOLE][ERROR] - Remember the amount has to be numerical and we cannot add more "
                                    "than 9 copies at a time, please try again:  ")
@@ -206,7 +205,7 @@ def add():
         amount = input("[CONSOLE] - Please enter the amount of purchased books you want to add to the library: ")
         # flow control to avoid user adding more than 9 copies at a time (this is a personal requirement) or not
         # inserting a numeric value
-        while int(amount) >= 10 or not amount.isdigit():
+        while amount not in ["1","2","3","4","5","6","7","8","9"]:
             print("")
             amount = input("[CONSOLE][ERROR] - Remember the amount has to be numerical and we cannot add more than "
                            "0 copies at a time, please try again:  ")
@@ -301,6 +300,7 @@ def search():
         if select_index.lower() == "n":
             print("")
             print("[CONSOLE] - Search terminated")
+            return True
         # if user wants to continue the function will print the details of the book + the ISBN number
         else:
             # flow control to avoid user inserting a number that is not referenced in the search results
@@ -350,8 +350,7 @@ def checkout(isbn):
     # flow control to guide user and avoid computation errors
     while check_out_ind.lower() not in ["y", "n"]:
         print("")
-        check_out_ind = input("[CONSOLE][ERROR] - I do not understand your command please use Y for yes or N for "
-                             "no, please try again: ")
+        check_out_ind = input("[CONSOLE][ERROR] - Please select 'Y' or 'N':")
     # if "Y" then the function looks for the book title by using the ISBN code
     if check_out_ind.lower() == "y":
         # uploading inventory information from the external database
@@ -420,7 +419,7 @@ def return_book():
             # flow control to ensure user selects a reference field stated in the result options
             while select_index not in postitions_list:
                 print("")
-                select_index = input("[CONSOLE] - Reference number selected invalid, please try again: ")
+                select_index = input("[CONSOLE][ERROR] - Reference number selected invalid, please try again: ")
             # find the isbn code of the book we are returning to update inventory and user log file information
             for key in inventory:
                 count += 1

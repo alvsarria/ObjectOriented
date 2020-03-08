@@ -78,20 +78,33 @@ while library_ind:
     # if 5 --> call checkout function to extract a book from library via using search function (checkout)
     if library_operation == "5":
         isbn = search()
-        # flow control to avoid user looking for some title without coincidences in the dictionary
-        while isbn == False:
-            isbn = search()
-        checkout(isbn)
-        print("")
-        user_ind = input("[CONSOLE] - Would you like to perform another operation? (Y/N)")
-        # flow control to guide user and avoid computation errors
-        while user_ind.lower() not in ["y", "n"]:
+        # in case search function is terminated by the user
+        if isbn == True:
             print("")
-            user_ind = input("[CONSOLE][ERROR] - Please select 'Y' or 'N':")
-        if user_ind.lower() == "n":
+            user_ind = input("[CONSOLE] - Would you like to perform another operation? (Y/N)")
+            # flow control to guide user and avoid computation errors
+            while user_ind.lower() not in ["y", "n"]:
+                print("")
+                user_ind = input("[CONSOLE][ERROR] - Please select 'Y' or 'N':")
+            if user_ind.lower() == "n":
+                print("")
+                print("[CONSOLE] - Logging out... thanks")
+                library_ind = False
+        else:
+            # flow control to avoid user looking for some title without coincidences in the dictionary
+            while isbn == False:
+                isbn = search()
+            checkout(isbn)
             print("")
-            print("[CONSOLE] - Logging out... thanks")
-            library_ind = False
+            user_ind = input("[CONSOLE] - Would you like to perform another operation? (Y/N)")
+            # flow control to guide user and avoid computation errors
+            while user_ind.lower() not in ["y", "n"]:
+                print("")
+                user_ind = input("[CONSOLE][ERROR] - Please select 'Y' or 'N':")
+            if user_ind.lower() == "n":
+                print("")
+                print("[CONSOLE] - Logging out... thanks")
+                library_ind = False
     # if 6 --> call add function to add new books to the library or increase the copies of the existing ones (checkout)
     if library_operation == "6":
         add()
