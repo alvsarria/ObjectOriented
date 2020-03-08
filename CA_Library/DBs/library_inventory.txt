@@ -13,7 +13,7 @@
 9780756404741;;The Name of the Wind;;Patrick Rothfuss;;4;;6
 9780756407919;;The Wise Man's Fear;;Patrick Rothfuss;;2;;2
 9780553386790;;A Game of Thrones;;George R.R. Martin;;6;;7
-9780553579901;;A Clash of Kings;;George R.R. Martin;;7;;8
+9780553579901;;A Clash of Kings;;George R.R. Martin;;8;;9
 9780553106633;;A Storm of Swords;;George R.R. Martin;;4;;5
 9780553582024;;A Feast for Crows;;George R.R. Martin;;5;;6
 9780553582017;;A Dance with Dragons;;George R.R. Martin;;8;;9
